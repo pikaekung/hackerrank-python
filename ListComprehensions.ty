@@ -1,0 +1,23 @@
+
+
+def solve(x, y, z, n):
+    result = []
+    q = [0, 0, 0]
+    for i in range(x+1):
+        q[0] = i
+        for j in range(y+1):
+            q[1] = j
+            for k in range(z+1):
+                q[2] = k
+
+                if q[0] + q[1] + q[2] == n:
+                    continue
+                else:
+                    result.append(q.copy())
+    return result
+
+
+#
+x, y, z, n = 1, 1, 1, 2
+result = solve(x, y, z, n)
+print(result)
